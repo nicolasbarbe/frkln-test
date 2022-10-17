@@ -62,5 +62,18 @@ export default async function decorate(block) {
     nav.setAttribute('aria-expanded', 'false');
     decorateIcons(nav);
     block.append(nav);
+
+    // button
+    const button = document.createElement('button');
+    button.classList.add('spectrum-Button');
+    button.classList.add('spectrum-Button--fill');
+    button.classList.add('spectrum-Button--accent');
+    button.classList.add('spectrum-Button--sizeM');
+    button.innerHTML = '<span class="spectrum-Button-label">Button</span>';
+    nav.prepend(button);
+
+    nav.setAttribute('aria-expanded', 'false');
+    decorateIcons(nav);
+    block.append(nav);
   }
 }

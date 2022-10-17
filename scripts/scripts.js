@@ -60,6 +60,12 @@ export function decorateMain(main) {
 async function loadEager(doc) {
   document.documentElement.lang = 'en';
   decorateTemplateAndTheme();
+
+  const html = doc.querySelector('html');
+  html.classList.add('spectrum');
+  html.classList.add('spectrum--medium');
+  html.classList.add('spectrum--light');
+
   const main = doc.querySelector('main');
   if (main) {
     decorateMain(main);
